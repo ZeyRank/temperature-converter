@@ -1,5 +1,8 @@
 def celsius_to_fahrenheit(celsius):
 	return (celsius * 9/5) + 32
+def fahrenheit_to_kelvin(fahrenheit):
+	celsius = fahrenheit_to_celsius(fahrenheit)
+	return celsius_to_kelvin(celsius)
 def fahrenheit_to_celsius(fahrenheit):
 	return (fahrenheit - 32) * 5/9
 def celsius_to_kelvin(celsius):
@@ -11,7 +14,8 @@ print("1. Цельсій -> Фаренгейт")
 print("2. Фаренгейт -> Цельсій")
 print("3. Цельсій -> Кельвін")
 print("4. Кельвін -> Цельсій")
-choice = input("\nВиберіть операцію (1-4): ")
+print("5. Фаренгейт -> Кельвін")
+choice = input("\nВиберіть операцію (1-5): ")
 
 try:
 
@@ -27,6 +31,9 @@ try:
 		print(f"{temp}°C = {result:.2f}K")
 	elif choice == '4':
 		result = kelvin_to_celsius(temp)
+		print(f"{temp}K = {result:.2f}°C")
+	elif choice == '5':
+		result = fahrenheit_to_kelvin(temp)
 		print(f"{temp}K = {result:.2f}°C")
 	else:
 		print("Невірний вибір!")
