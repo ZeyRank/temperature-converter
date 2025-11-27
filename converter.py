@@ -1,5 +1,8 @@
 def celsius_to_fahrenheit(celsius):
 	return (celsius * 9/5) + 32
+def fahrenheit_to_kelvin(fahrenheit):
+	celsius = fahrenheit_to_celsius(fahrenheit)
+	return celsius_to_kelvin(celsius)
 def fahrenheit_to_celsius(fahrenheit):
 	return (fahrenheit - 32) * 5/9
 def celsius_to_kelvin(celsius):
@@ -28,6 +31,9 @@ try:
 	elif choice == '4':
 		result = kelvin_to_celsius(temp)
 		print(f"{temp}K = {result:.2f}°C")
+	elif choice == '4':
+                result = 
+                print(f"{temp}K = {result:.2f}°C")
 	else:
 		print("Невірний вибір!")
 except ValueError:
